@@ -32,7 +32,10 @@ function displayFromLocalST() {
 function getbookInfo(bookList) {
   // Check if both book name and book link are provided
   if (bookName.value != "" && bookLink.value != "") {
-    // Create a new book object and push it to the booksArr array
+    const linkRegex = /\b(?:www\.)?[\w.-]+\.[A-Z|a-z]{2,}/;
+    const match=bookLink.value.match(linkRegex)
+    if (match) {
+      // Create a new book object and push it to the booksArr array
     booksArr.push({ book: bookName.value, link: bookLink.value });
 
     // Store the updated book data in local storage
@@ -46,7 +49,17 @@ function getbookInfo(bookList) {
 
     // Display the updated book list in a table
     displayQouteInTable(bookList);
-  } else if (bookName.value === "") {
+   removeErr();
+    }
+    else {
+      // Display a warning message for an invalid link
+      message = `<p class="lead">Please enter a valid book link</p>`;
+      warninglink.innerHTML = message;
+      warninglink.classList.remove("d-none");
+    }
+    
+  } 
+  else if (bookName.value === "") {
     // If the book name is empty, display a warning message
     message = `<p class ="lead">please enter a valid book name</p>`;
     warning.innerHTML = message;
@@ -147,3 +160,7 @@ function clearInputs() {
   bookLink.value = "";
 }
 
+function removeErr() {
+warninglink.classList.add("d-none");
+warning.classList.add("d-none")
+}
