@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="py-5 ">
+        <nav class="container border-bottom py-md-3 ">
+            <h1 class="text-dark-emphasis fw-bolder fs-1">BookMaker</h1>
+        </nav>
+    </header>
+    
+    <section id="main section" class="container  bg-dark-subtle rounded">
+    
+        <h2 class="text-center py-3">Bookmark your favorite sites</h2>
+        <form class="py-md-4 w-75 m-auto form-control bg-dark-subtle">
+            <label for="bookName">Book Name</label>
+            <input id="bookName" class="form-control mb-4  " type="text" placeholder="Write your book name here ">
+            <div id="warning" class="bg-danger bg-opacity-50 rounded-1"> </div>
+            <label for="bookSiteLink" class="mt-4">Book Link</label>
+            <input id="bookSiteLink" class="form-control" type="text" placeholder="Write your book link here ">
+            <div id="warninglink" class="bg-danger  bg-opacity-50">
+            </div>
+            <div class=" text-center pt-3 "><button type="button" id="submitButton" onclick="getbookInfo(booksArr)"
+                    class="btn shadow btn-primary ">Submit</button>
+            </div>
+        </form>
+    </section>
+    
+    <section class="pt-4 ">
+        <table id="hideTable" class=" bg-info container rounded bg-opacity-10 mt-3 d-none">
+            <thead class="">
+                <tr class="bg-primary bg-opacity-10">
+                    <th class="fs-2 lead text-center">Book Name</th>
+                    <th class="fs- lead text-center">action</th>
+                </tr>
+            </thead>
+            <tbody id="displayTable">
+    
+            </tbody>
+    
+        </table>
+    
+    
+    </section>
+    
+    <footer class="py-5">
+        <div class="container border-top pt-3">
+            <p>© 2019 Bookmarker Inc.</p>
+        </div>
+    </footer>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
