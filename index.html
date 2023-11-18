@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="particles-js" class="position-absolute z-n1 w-100  h-100 top-0 start-0 "></div>
     <header class="py-5 ">
         <nav class="container border-bottom py-md-3 ">
             <h1 class="text-dark-emphasis fw-bolder fs-1">BookMaker</h1>
         </nav>
     </header>
     
-    <section id="main section" class="container  bg-dark-subtle rounded">
+    <section id="main section" class="container  bg-dark rounded bg-opacity-10">
     
         <h2 class="text-center py-3">Bookmark your favorite sites</h2>
-        <form class="py-md-4 w-75 m-auto form-control bg-dark-subtle">
+        <form class="py-md-4 w-75 m-auto form-control bg-transparent ">
             <label for="bookName">Book Name</label>
             <input id="bookName" class="form-control mb-2  " type="text" placeholder="Write your book name here ">
             <div id="warning" class="bg-danger bg-opacity-50 rounded-1"> </div>
@@ -53,7 +54,9 @@
             <p>© 2019 Bookmarker Inc.</p>
         </div>
     </footer>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
